@@ -30,7 +30,10 @@ export default class MonthlyCalendar extends Component {
                             return (
                                 <tr key={'w' + index}>
                                     {week.map(day => {
-                                        return <DayCell year={day[0]} month={day[1]} day={day[2]} key={day.toString()} />;
+                                        return <DayCell
+                                            year={day[0]} month={day[1]} day={day[2]} key={day.toString()}
+                                            onClick={(event) => this.props.updateView(day)}
+                                            currentView={this.props.currentView} />;
                                     })}
                                 </tr>
                             );

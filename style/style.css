@@ -3,6 +3,10 @@
     font-weight: normal !important;
 }
 
+.day-cell:hover {
+    background-color: #f7f7f7;
+}
+
 .day-in-month {
     vertical-align: top;
     position: relative;
@@ -19,7 +23,7 @@
 }
 
 .today-in-month.other-month {
-    color: rgb(0, 0, 255, 0.5);
+    color: rgba(0, 0, 255, 0.5);
 }
 
 .arrow {

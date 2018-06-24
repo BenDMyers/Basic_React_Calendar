@@ -11,11 +11,11 @@ export default class DayCell extends Component {
             dayString = months_abbrev[month] + " " + dayString;
         }
         let todayClass = _.isEqual([year, month, day], getToday()) ? "today-in-month" : '';
-        let otherMonthClass = month === getToday()[1] ? '' : 'other-month';
+        let otherMonthClass = month === this.props.currentView[1] ? '' : 'other-month';
         let css = `day-in-month ${todayClass} ${otherMonthClass}`
 
         return (
-            <td className="day-cell" key={`${year}${month}${day}`}>
+            <td className="day-cell" key={`${year}${month}${day}`} onClick={this.props.onClick}>
                 <span className={css}>{dayString}</span>
             </td>
         );

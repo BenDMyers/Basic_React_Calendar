@@ -10,6 +10,7 @@ export default class App extends Component {
             currentView: [today.getFullYear(), today.getMonth()]
         }
         this.updateView = this.updateView.bind(this);
+        this.getC
     }
 
     render() {
@@ -18,11 +19,12 @@ export default class App extends Component {
                 month={this.state.currentView[1]}
                 year={this.state.currentView[0]}
                 updateView={this.updateView}
+                currentView={this.state.currentView}
             />
         );
     }
 
     updateView(newView) {
-        this.setState({currentView: newView})
+        this.setState({currentView: newView});
     }
 }
