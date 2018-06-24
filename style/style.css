@@ -1,0 +1,51 @@
+.other-month {
+    color: #999;
+    font-weight: normal !important;
+}
+
+.day-in-month {
+    vertical-align: top;
+    position: relative;
+    text-align: right;
+    font-size: 150%;
+    width: 100%;
+    display: block;
+    padding-right: 5px;
+    font-weight: bold;
+}
+
+.today-in-month {
+    color: blue;
+}
+
+.today-in-month.other-month {
+    color: rgb(0, 0, 255, 0.5);
+}
+
+.arrow {
+    border: solid black;
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 5px;
+}
+
+.arrow-right {
+    transform: rotate(-45deg) !important;
+    -webkit-transform: rotate(-45deg) !important;
+}
+
+.arrow-left {
+    transform: rotate(135deg) !important;
+    -webkit-transform: rotate(135deg) !important;
+}
+
+.arrow:hover {
+    border: solid blue;
+    transition: .5s;
+    cursor: pointer;
+    border-width: 0 5px 5px 0;
+}
+
+* {
+    font-family: 'Source Sans Pro', sans-serif;
+}
