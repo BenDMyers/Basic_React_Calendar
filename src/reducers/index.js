@@ -1,7 +1,8 @@
 import { combineReducers } from 'redux';
+import ViewReducer from './reducer_view';
 
 const rootReducer = combineReducers({
-  state: (state = {}) => state
+    view: ViewReducer
 });
 
 export default rootReducer;
