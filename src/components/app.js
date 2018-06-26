@@ -2,18 +2,22 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 
-import MonthlyCalendar from '../containers/monthly-calendar';
+import {dateArrayToString} from '../CalendarUtils';
+import MonthView from './month-view/month-view';
 import {updateView} from '../actions/index';
 
 class App extends Component {
+    componentWillMount() {
+        document.title = dateArrayToString(this.props.view);
+    }
+
+    componentDidUpdate() {
+        document.title = dateArrayToString(this.props.view);
+    }
+
     render() {
         return (
-            <MonthlyCalendar
-                tabindex="0"
-                view={this.props.view}
-                updateView={this.props.updateView}
-                onKeyDown={event => this.onKeyPressed(event)}
-            />
+            <MonthView view={this.props.view} updateView={this.props.updateView} />
         );
     }
 }

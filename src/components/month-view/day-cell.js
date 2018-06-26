@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import _ from 'lodash';
 
-import {days, months, months_abbrev, getWeeks, getPreviousMonth, getNextMonth, getToday} from '../CalendarUtils';
+import {days, months, months_abbrev, getWeeks, getPreviousMonth, getNextMonth, getToday} from '../../CalendarUtils';
 
 export default class DayCell extends Component {
     render() {

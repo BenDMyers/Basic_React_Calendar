@@ -8,6 +8,18 @@ export const months = ['January', 'February', 'March', 'April', 'May', 'June', '
     'September', 'October', 'November', 'December']
 export const months_abbrev = months.map(m => m.substring(0, 3));
 
+export function dateArrayToString(dateArray) {
+    switch(dateArray.length) {
+        case 1:
+            return dateArray[0]; // year
+        case 2:
+            return months[dateArray[1]] + " " + dateArray[0]; // month year
+        case 3:
+            return months[dateArray[1]] + " " + dateArray[0]; // month year
+            // return months[dateArray[1]] + " " + dateArray[2] + ", " + dateArray[0]; // month day year
+    }
+}
+
 export function getToday() {
     let today = new Date();
     return [today.getFullYear(), today.getMonth(), today.getDate()];
