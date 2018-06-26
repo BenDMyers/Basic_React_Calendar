@@ -3,7 +3,7 @@
     font-weight: normal !important;
 }
 
-.day-cell:hover {
+.day-cell:hover, .month-cell:hover {
     background-color: #f7f7f7;
 }
 
@@ -24,6 +24,17 @@
 
 .today-in-month.other-month {
     color: rgba(0, 0, 255, 0.5);
+}
+
+.month-cell {
+    vertical-align: middle !important;
+    text-align: center;
+    height: 33%;
+}
+
+.month-cell h4 {
+    font-weight: bolder;
+    /* font-size: 80%; */
 }
 
 .arrow {
@@ -48,6 +59,18 @@
     transition: .5s;
     cursor: pointer;
     border-width: 0 5px 5px 0;
+}
+
+.nav-blue {
+    color: black;
+    text-decoration: none;
+}
+
+a.nav-blue:hover {
+    color: blue;
+    text-decoration: none !important;
+    transition: .5s;
+    cursor: pointer;
 }
 
 * {

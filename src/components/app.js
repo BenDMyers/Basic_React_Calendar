@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 
 import {dateArrayToString} from '../CalendarUtils';
+import YearView from './year-view/year-view';
 import MonthView from './month-view/month-view';
 import {updateView} from '../actions/index';
 
@@ -16,9 +17,17 @@ class App extends Component {
     }
 
     render() {
-        return (
-            <MonthView view={this.props.view} updateView={this.props.updateView} />
-        );
+        if(this.props.view.length == 1) {
+            return <YearView view={this.props.view} updateView={this.props.updateView} />
+        }
+        else if(this.props.view.length == 2) {
+            return (
+                <MonthView view={this.props.view} updateView={this.props.updateView} />
+            );
+        }
+        else {
+            return <ul>{this.props.view.map(x => <li>{x}</li>)}</ul>;
+        }
     }
 }
 

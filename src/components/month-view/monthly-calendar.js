@@ -3,7 +3,6 @@ import _ from 'lodash';
 
 import {days, months, months_abbrev, getWeeks, getPreviousMonth, getNextMonth, dateArrayToString} from '../../CalendarUtils';
 import DayCell from './day-cell';
-import Header from '../header';
 
 export default class MonthlyCalendar extends Component {
     render() {

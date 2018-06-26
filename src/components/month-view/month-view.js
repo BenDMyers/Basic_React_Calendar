@@ -14,6 +14,7 @@ class MonthView extends Component {
                     view={this.props.view} updateView={this.props.updateView}
                     onLeft={() => this.props.updateView(getPreviousMonth(year, month))}
                     onRight={() => this.props.updateView(getNextMonth(year, month))}
+                    onClickTitle={() => this.props.updateView([year])}
                 />
                 <MonthlyCalendar view={this.props.view} updateView={this.props.updateView} />
             </div>

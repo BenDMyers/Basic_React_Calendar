@@ -11,10 +11,12 @@ class Header extends Component {
                 <td><a onClick={this.props.onLeft}>
                     <i className="arrow arrow-left"></i>
                 </a></td>
-            <td><h1 style={{fontWeight: 'bold'}}>{dateArrayToString(this.props.view)}</h1></td>
-                <td><a onClick={this.props.onRight}>
-                    <i className="arrow arrow-right"></i>
-                </a></td>
+            <td><a onClick={this.props.onClickTitle} className="nav-blue">
+                <h1 style={{fontWeight: 'bold'}}>{dateArrayToString(this.props.view)}</h1>
+            </a></td>
+            <td><a onClick={this.props.onRight}>
+                <i className="arrow arrow-right"></i>
+            </a></td>
             </tr></thead></table>
         );
     }
